@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="card chart-card">
+    <view class="row">
+      <view>
+        <view class="section-title">曲线预览</view>
+        <view class="muted small">横轴：time　纵轴：荧光</view>
+      </view>
+      <picker mode="selector" range="{{wellNames}}" value="{{selectedIndex}}" bindchange="onSelectWell">
+        <view class="picker-btn">{{selectedWell || '选择孔位'}}</view>
+      </picker>
+    </view>
+    <canvas canvas-id="curveCanvas" class="curve-canvas"></canvas>
+  </view>
+
+  <view class="card selected-card" wx:if="{{selectedInfo}}">
+    <view class="section-title">{{selectedInfo.well}}</view>
+    <view class="detail-line"><text>判读结果</text><text class="{{selectedInfo.labelClass}}">{{selectedInfo.label_text}}</text></view>
+    <view class="detail-line"><text>置信度</text><text>{{selectedInfo.confidenceText}}</text></view>
+    <view class="reason" wx:if="{{selectedInfo.reason}}">{{selectedInfo.reason}}</view>
+  </view>
+
+  <view class="card list-card">
+    <view class="section-title">全部孔位</view>
+    <view class="well-row" wx:for="{{wells}}" wx:key="well" data-index="{{index}}" bindtap="tapWell">
+      <view>
+        <view class="well-name">{{item.well}}</view>
+        <view class="muted tiny">置信度 {{item.confidenceText}}</view>
+      </view>
+      <view class="well-result {{item.labelClass}}">{{item.label_text}}</view>
+    </view>
+  </view>
+</view>

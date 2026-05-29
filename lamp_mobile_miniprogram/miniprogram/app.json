@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/result/result",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarTitleText": "LAMP判读",
+    "navigationBarBackgroundColor": "#3556F5",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F4F6FB"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

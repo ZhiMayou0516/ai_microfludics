@@ -1,0 +1,66 @@
+<view class="hero">
+  <view class="hero-title">LAMP 曲线智能判读</view>
+  <view class="hero-sub">上传检测文件后，自动输出阴性 / 阳性 / 需复核结果</view>
+</view>
+
+<view class="container index-wrap">
+  <view class="card step-card">
+    <view class="step-title">第一步</view>
+    <view class="step-main">选择检测数据</view>
+    <view class="file-box" bindtap="chooseFile">
+      <view class="file-icon">＋</view>
+      <view class="file-name">{{fileName || '上传 CSV / Excel 文件'}}</view>
+      <view class="file-tip">每列一个孔，每行一个时间点</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="form-label">样本编号</view>
+    <input class="input" placeholder="可选，例如 SAMPLE-001" value="{{sampleId}}" bindinput="onSampleInput" />
+
+    <view class="form-label top-gap">判读方式</view>
+    <view class="mode-grid">
+      <view class="mode-item {{mode === 'rule' ? 'active' : ''}}" data-mode="rule" bindtap="setMode">
+        <view class="mode-title">规则判读</view>
+        <view class="mode-desc">稳定、可解释</view>
+      </view>
+      <view class="mode-item {{mode === 'ai' ? 'active' : ''}}" data-mode="ai" bindtap="setMode">
+        <view class="mode-title">AI 判读</view>
+        <view class="mode-desc">模型辅助复核</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card advanced">
+    <view class="row" bindtap="toggleAdvanced">
+      <view class="section-title">高级设置</view>
+      <view class="muted">{{showAdvanced ? '收起' : '展开'}}</view>
+    </view>
+    <view wx:if="{{showAdvanced}}" class="advanced-body">
+      <view class="setting-row">
+        <view>
+          <view class="setting-name">去除前 N 行</view>
+          <view class="setting-tip">默认去掉早期不稳定读数</view>
+        </view>
+        <input class="small-input" type="number" value="{{dropFirstRows}}" bindinput="onDropRowsInput" />
+      </view>
+      <view class="setting-row">
+        <view>
+          <view class="setting-name">平滑窗口</view>
+          <view class="setting-tip">建议奇数，默认 5</view>
+        </view>
+        <input class="small-input" type="number" value="{{smoothWindow}}" bindinput="onSmoothInput" />
+      </view>
+      <view class="setting-row">
+        <view>
+          <view class="setting-name">第一列为 time</view>
+          <view class="setting-tip">若第一列只是时间/序号则打开</view>
+        </view>
+        <switch checked="{{dropTimeColumn}}" bindchange="onTimeColumnChange" color="#3556f5" />
+      </view>
+    </view>
+  </view>
+
+  <button class="primary-btn start-btn" loading="{{loading}}" bindtap="startAnalyze">开始检测</button>
+  <view class="bottom-tip">本页面只做文件上传和结果展示；曲线判读由 Python 后端完成。</view>
+</view>

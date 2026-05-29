@@ -1,0 +1,144 @@
+.hero {
+  background: linear-gradient(180deg, #3556f5 0%, #4264ff 76%, #f4f6fb 76%);
+  padding: 44rpx 32rpx 78rpx;
+  color: #ffffff;
+}
+.hero-title {
+  font-size: 42rpx;
+  font-weight: 800;
+  letter-spacing: 1rpx;
+}
+.hero-sub {
+  margin-top: 14rpx;
+  font-size: 26rpx;
+  opacity: 0.9;
+}
+.index-wrap {
+  margin-top: -52rpx;
+}
+.step-title {
+  color: #3556f5;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+.step-main {
+  margin-top: 6rpx;
+  font-size: 34rpx;
+  font-weight: 800;
+}
+.file-box {
+  margin-top: 24rpx;
+  border: 2rpx dashed #c8d2ff;
+  border-radius: 22rpx;
+  background: #f7f9ff;
+  padding: 34rpx 20rpx;
+  text-align: center;
+}
+.file-icon {
+  width: 74rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  margin: 0 auto 16rpx;
+  border-radius: 50%;
+  background: #dce4ff;
+  color: #3556f5;
+  font-size: 42rpx;
+  font-weight: 800;
+}
+.file-name {
+  font-size: 29rpx;
+  font-weight: 700;
+  color: #1f2937;
+  word-break: break-all;
+}
+.file-tip {
+  margin-top: 8rpx;
+  color: #8a93a6;
+  font-size: 24rpx;
+}
+.form-label {
+  font-size: 27rpx;
+  font-weight: 700;
+  margin-bottom: 12rpx;
+}
+.top-gap {
+  margin-top: 28rpx;
+}
+.input {
+  height: 84rpx;
+  background: #f6f8fc;
+  border-radius: 16rpx;
+  padding: 0 22rpx;
+  box-sizing: border-box;
+}
+.mode-grid {
+  display: flex;
+  gap: 18rpx;
+}
+.mode-item {
+  flex: 1;
+  padding: 24rpx 18rpx;
+  background: #f6f8fc;
+  border: 2rpx solid transparent;
+  border-radius: 20rpx;
+}
+.mode-item.active {
+  background: #eef3ff;
+  border-color: #3556f5;
+}
+.mode-title {
+  font-size: 28rpx;
+  font-weight: 800;
+}
+.mode-desc {
+  margin-top: 6rpx;
+  color: #8a93a6;
+  font-size: 23rpx;
+}
+.section-title {
+  font-size: 30rpx;
+  font-weight: 800;
+}
+.advanced-body {
+  margin-top: 18rpx;
+}
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18rpx 0;
+  border-top: 1rpx solid #edf0f6;
+}
+.setting-name {
+  font-size: 27rpx;
+  font-weight: 700;
+}
+.setting-tip {
+  margin-top: 4rpx;
+  color: #8a93a6;
+  font-size: 22rpx;
+}
+.small-input {
+  width: 120rpx;
+  height: 68rpx;
+  text-align: center;
+  background: #f6f8fc;
+  border-radius: 14rpx;
+}
+.start-btn {
+    width: 100%;
+    display: block;
+    height: 92rpx;
+    line-height: 92rpx;
+    margin-top: 10rpx;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 32rpx;
+  }
+.bottom-tip {
+  text-align: center;
+  color: #8a93a6;
+  font-size: 23rpx;
+  margin: 18rpx 0 40rpx;
+}

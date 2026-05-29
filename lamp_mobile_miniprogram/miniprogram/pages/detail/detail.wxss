@@ -1,0 +1,58 @@
+.section-title {
+  font-size: 30rpx;
+  font-weight: 850;
+}
+.small { font-size: 22rpx; margin-top: 6rpx; }
+.tiny { font-size: 21rpx; margin-top: 4rpx; }
+.picker-btn {
+  padding: 14rpx 22rpx;
+  border-radius: 999rpx;
+  background: #eef3ff;
+  color: #3556f5;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+.curve-canvas {
+  width: 100%;
+  height: 430rpx;
+  margin-top: 24rpx;
+  background: #fbfcff;
+  border-radius: 18rpx;
+}
+.detail-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #f0f2f6;
+  font-size: 26rpx;
+}
+.detail-line:last-child { border-bottom: 0; }
+.reason {
+  margin-top: 18rpx;
+  background: #f7f9ff;
+  border-radius: 16rpx;
+  padding: 18rpx;
+  color: #6b7280;
+  line-height: 1.65;
+  font-size: 23rpx;
+}
+.positive { color: #e64545; }
+.negative { color: #15b985; }
+.review { color: #f59e0b; }
+.abnormal { color: #ef4444; }
+.well-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18rpx 0;
+  border-bottom: 1rpx solid #f0f2f6;
+}
+.well-row:last-child { border-bottom: 0; }
+.well-name {
+  font-size: 27rpx;
+  font-weight: 800;
+}
+.well-result {
+  font-size: 27rpx;
+  font-weight: 900;
+}

@@ -1,0 +1,53 @@
+<view class="result-hero {{overallClass}}">
+  <view class="top-title">检测结果</view>
+  <view class="result-card">
+    <view class="status-icon {{overallClass}}">{{statusIcon}}</view>
+    <view class="status-text {{overallClass}}">{{result.overall_text}}</view>
+    <view class="status-sub">{{result.method_text}}｜{{result.n_wells}} 孔｜{{result.n_points}} 个时间点</view>
+  </view>
+</view>
+
+<view class="container result-wrap">
+  <view class="card info-card">
+    <view class="info-line"><text class="label">样本编号</text><text>{{result.sample_id}}</text></view>
+    <view class="info-line"><text class="label">文件名称</text><text>{{result.filename}}</text></view>
+    <view class="info-line"><text class="label">判读方式</text><text>{{result.method_text}}</text></view>
+  </view>
+
+  <view class="summary-grid">
+    <view class="summary-item">
+      <view class="num positive">{{result.counts.positive}}</view>
+      <view class="name">阳性</view>
+    </view>
+    <view class="summary-item">
+      <view class="num negative">{{result.counts.negative}}</view>
+      <view class="name">阴性</view>
+    </view>
+    <view class="summary-item">
+      <view class="num review">{{result.counts.review}}</view>
+      <view class="name">需复核</view>
+    </view>
+    <view class="summary-item">
+      <view class="num abnormal">{{result.counts.abnormal}}</view>
+      <view class="name">异常</view>
+    </view>
+  </view>
+
+  <view class="card action-card">
+    <button class="secondary-btn" bindtap="goDetail">查看曲线与详情</button>
+    <button class="primary-btn" bindtap="backHome">重新检测</button>
+  </view>
+
+  <view class="card wells-card">
+    <view class="section-title">孔位结果</view>
+    <view class="well-row" wx:for="{{previewWells}}" wx:key="well">
+      <view>
+        <view class="well-name">{{item.well}}</view>
+        <view class="well-reason">{{item.previewText}}</view>
+      </view>
+      <view class="well-result {{item.labelClass}}">{{item.label_text}}</view>
+    </view>
+  </view>
+
+  <view class="note">{{result.note}}</view>
+</view>

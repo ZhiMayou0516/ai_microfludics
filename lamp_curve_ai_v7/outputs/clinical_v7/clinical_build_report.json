@@ -1,0 +1,60 @@
+{
+  "n_labels": 5446,
+  "n_curve_files": 2830,
+  "n_expanded_sample_slots": 5660,
+  "n_matched_samples": 5444,
+  "n_sample_feature_rows": 5444,
+  "n_well_rows": 81660,
+  "n_errors": 0,
+  "sample_id_mode": "two_per_file",
+  "sample_layout": "two_per_file_15x2",
+  "wells_per_sample": 15,
+  "batch_start_override": {
+    "结果1-1600": 1,
+    "结果3857-5444": 1601
+  },
+  "numeric_parent_only": true,
+  "curve_files_by_batch": {
+    "结果3857-5444": 2030,
+    "结果1-1600": 800
+  },
+  "expanded_slots_by_batch": {
+    "结果3857-5444": 4060,
+    "结果1-1600": 1600
+  },
+  "curve_id_warning_count": 0,
+  "duplicated_expanded_sample_ids": 0,
+  "label_counts": {
+    "negative": 3459,
+    "positive": 1987
+  },
+  "matched_label_counts": {
+    "negative": 3459,
+    "positive": 1985
+  },
+  "raw_label_top20": {
+    "阴性": 3459,
+    "碳青霉烯类（A类丝氨酸酶）+肺炎克雷伯菌": 222,
+    "喹诺酮类": 184,
+    "大肠埃希氏菌": 183,
+    "大肠埃希氏菌+四环素类": 177,
+    "铜绿假单胞菌": 162,
+    "金黄色葡萄球菌": 150,
+    "鲍曼不动杆菌": 147,
+    "屎肠球菌": 145,
+    "利奈唑胺类": 82,
+    "碳青霉烯类（A类丝氨酸酶）+肺炎克雷伯菌+鲍曼不动杆菌": 59,
+    "鲍曼不动杆菌+喹诺酮类": 40,
+    "大肠埃希氏菌+鲍曼不动杆菌+四环素类": 37,
+    "金黄色葡萄球菌+鲍曼不动杆菌": 35,
+    "屎肠球菌+喹诺酮类": 25,
+    "屎肠球菌+鲍曼不动杆菌": 24,
+    "铜绿假单胞菌+金黄色葡萄球菌+喹诺酮类": 22,
+    "铜绿假单胞菌+喹诺酮类": 22,
+    "铜绿假单胞菌+大肠埃希氏菌+四环素类": 18,
+    "金黄色葡萄球菌+利奈唑胺类": 16
+  },
+  "unmatched_expanded_sample_slots": 216,
+  "unmatched_labels": 2,
+  "errors": []
+}
